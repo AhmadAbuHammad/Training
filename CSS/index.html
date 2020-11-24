@@ -11,35 +11,50 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    li{
-      float: left;
-      padding: 16px;
-    }
-    ul
-    {
-      text-align: center;
-      list-style-type: none;
-    }
+    .attribution a { color: hsl(229, 25%, 58%); }
+   li{
+     float: left;
+     font-size: 18px;
+     
+   }
+   li a{
+     color: hsl(233, 8%, 62%);
+     text-align: center;
+     padding: 12px;
+     text-decoration: none;
+   }
+   li a:hover{
+     color: hsl(233, 26%, 24%);
+   }
+   .borderLink
+   {
+     background-image: linear-gradient(to right, #31d35c,#2bb7da);
+     color: white;
+     text-decoration:none;
+   }
+   .borderLink:hover
+   {
+     color: white;
+   }
   </style>
 </head>
-<body>
-  <header>
-    <img src="images/logo.svg" alt="">
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-      <li>Blog</li>
-      <li>Careers</li>
-    </ul>  
+<body >
+  <header style="width: 1440px; margin-left: auto;
+  margin-right: auto;">
+    <div>
+      <img style="float: left;" src="images/logo.svg" alt="">
+      <ul style="list-style-type: none; overflow: hidden;">
+        <li><a href= "#">Home</a></li>
+        <li><a href= "#">About</a></li>
+        <li><a href= "#">Contact</a></li>
+        <li><a href= "#">Blog</a></li>
+        <li><a href= "#">Careers</a></li>
+      </ul>
+    </div>
+    <a class="borderLink" href="#" style="border:solid white;padding: 10px; border-radius: 25px; ">Request Invite</a>
   </header>
-  
-  
-  Request Invite
-
-
-
+  <br>  
+  <p>
   Next generation digital banking
 
   Take your financial life online. Your Easybank account will be a one-stop-shop 
@@ -106,7 +121,7 @@
   Request Invite
 
   © Easybank. All Rights Reserved
-  
+  </p>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
