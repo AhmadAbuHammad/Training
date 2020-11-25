@@ -1,5 +1,7 @@
 .headerBox
     {
+      font-family: 'Public Sans', sans-serif;
+      Font-size: 18px;
       width: 1440px;
       margin: auto 0;
       background-color: #fff;
@@ -88,7 +90,7 @@
     {
       height: 2.5rem;
       margin: 12px 0 12px 0;
-      font-size: 15px;
+      Font-size: 18px;
       border: none;
       color: #fff;
       border-radius: 25px;
@@ -109,6 +111,8 @@
     }
     footer 
     {
+      font-family: 'Public Sans', sans-serif;
+      Font-size: 18px;
       width: 1440px;
       background: #2d314d;
       padding: 2.5rem 1.5rem 1.5rem 4rem;
@@ -145,25 +149,68 @@
       }
       .footer_firstList
       {
-        margin: 0px 0px 0px 56px;
+        margin: -16px 0px 0px 56px;
 
       }
+
       .footer_firstList ul
       {
           list-style-type: none;
 
       }
+      .footer_firstList li
+      {
+        margin: 14px 0px 0px 0px;
+      }
+      .footer_firstList li a
+      {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer_firstList li a:hover
+      {
+        color: hsl(136, 65%, 51%);
+      }
       .footer_secondList
       {
-          margin: 0px 0px 0px 45px;
+          margin: -16px 0px 0px 45px;
 
       }
       .footer_secondList ul 
       {
           list-style-type: none;
-
+      }
+      .footer_secondList li
+      {
+        margin: 14px 0px 0px 0px;
+      }
+      .footer_secondList li a
+      {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer_secondList li a:hover
+      {
+        color: hsl(136, 65%, 51%);
       }
       .Footer_button
       {
-          margin: 0px 0px 0px 297px;
+        margin: 0px 0px 0px 209px;
+      }
+      .Footer_button button
+      {
+        margin: -4px 0px 15px 121px; 
+        height: 2.5rem;
+        font-size: 18px;
+        border: none;
+        color: #fff;
+        border-radius: 25px;
+        padding: 5px 20px 5px 20px;
+        background-image: linear-gradient(to right, #31d35c, #2bb7da);
+        cursor: pointer;
+        outline: none;  
+      }
+      .Footer_button p
+      {
+        color:hsl(233, 8%, 62%);
       }
