@@ -10,48 +10,127 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(229, 25%, 58%); }
-   li{
-     float: left;
-     font-size: 18px;
-     
-   }
-   li a{
-     color: hsl(233, 8%, 62%);
-     text-align: center;
-     padding: 12px;
-     text-decoration: none;
-   }
-   li a:hover{
-     color: hsl(233, 26%, 24%);
-   }
-   .borderLink
-   {
-     background-image: linear-gradient(to right, #31d35c,#2bb7da);
-     color: white;
-     text-decoration:none;
-   }
-   .borderLink:hover
-   {
-     color: white;
-   }
+    .headerBox
+    {
+      background-color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 0px;
+      margin: 2px;
+      -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+    .headerBox img 
+    {
+      height: 20px;
+      margin: 20px;
+    }
+    .headerBox ul
+    {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      text-align: center;
+      margin-right: 7rem;
+      overflow: hidden;
+    }
+    .headerBox li
+    {
+      margin: 20px 20px;
+    }
+    .headerBox a
+    {
+      
+      text-decoration: none;
+      color: #9698a6;
+    }
+    .headerBox a:hover
+    {
+      color: #2d314d;
+      
+    }
+    .headerBox a::after
+    {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 49px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      top: 3rem;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .headerBox a:hover::after
+    {
+      background-image: linear-gradient(to right,#31d35c, #2bb7da);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+      top: 6rem;
+      opacity: 1;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+    .headerBox button
+    {
+      height: 2.5rem;
+      margin: 12px 0 12px 0;
+      font-size: 15px;
+      border: none;
+      color: #fff;
+      border-radius: 25px;
+      padding: 5px 20px 5px 20px;
+      background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+      background-image: linear-gradient(to right, #31d35c, #2bb7da);
+      cursor: pointer;
+      outline: none;
+      -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+    .headerBox button:active 
+    {
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+    }
+    
   </style>
 </head>
 <body >
-  <header style="width: 1440px; margin-left: auto;
-  margin-right: auto;">
-    <div>
-      <img style="float: left;" src="images/logo.svg" alt="">
-      <ul style="list-style-type: none; overflow: hidden;">
+  <header >
+    <div class="headerBox">
+      <img src="images/logo.svg" alt="Easybank">
+      <ul>
         <li><a href= "#">Home</a></li>
         <li><a href= "#">About</a></li>
         <li><a href= "#">Contact</a></li>
         <li><a href= "#">Blog</a></li>
         <li><a href= "#">Careers</a></li>
       </ul>
-    </div>
-    <a class="borderLink" href="#" style="border:solid white;padding: 10px; border-radius: 25px; ">Request Invite</a>
+      <button>Request Invite</button>
+    </div> 
   </header>
   <br>  
   <p>
