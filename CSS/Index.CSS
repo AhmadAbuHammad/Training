@@ -130,6 +130,10 @@ body{
       padding: 2.5rem 1.5rem 1.5rem 4rem;
 
     }
+    .section11
+    {
+      width: 100px;
+    }
     .section1Img
     {
       flex: 3;
@@ -170,17 +174,15 @@ body{
     .section1Paragraph button
     {
       margin: 5px 2rem 3rem;
-  font-size: 15px;
-  border: none;
-  color: #fff;
-  border-radius: 25px;
-  padding: 15px 25px 15px 25px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
-  background-image: linear-gradient(to right, #31d35c, #2bb7da);
-  cursor: pointer;
-  outline: none;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      border: none;
+      color: #fff;
+      border-radius: 25px;
+      padding: 15px 25px 15px 25px;
+      background-image: linear-gradient(to right, #31d35c, #2bb7da);
+      cursor: pointer;
+      outline: none;
+      -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     }
     .section1Paragraph button:active
     {
@@ -261,7 +263,68 @@ body{
       text-align: left;
       font-size: 18px;
     }
+    .section3
+    {
+      width: 1440px;
+      background-color:hsl(0, 0%, 98%);
+      overflow: hidden;
+      padding: 2.5rem 1.5rem 1.5rem 4rem;
 
+    }
+    .section3Header
+    {
+      padding: 4rem;
+      margin: 0 0 0 21px;
+    }
+    .section3Grid
+    {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      padding: 0 5rem 5rem 5rem;
+    }
+    .section3Gridlist
+    {
+      background:hsl(0, 0%, 98%);
+
+    }
+    .section3Paragraph
+    {
+      padding: 10px 10px 10px 10px;
+    }
+    .section3Gridlist h6
+    {
+      
+      color: hsl(233, 8%, 62%);
+    } 
+    .section3Gridlist h3
+    {
+      font-size: 1.5rem;
+      
+    }
+    .section3Gridlist a
+    {
+      text-decoration: none;
+      color:hsl(233, 26%, 24%);
+
+    }
+    .section3Gridlist a:hover
+    {
+      text-decoration: none;
+      color:hsl(136, 65%, 51%);
+
+    }
+    .section3Gridlist p
+    {
+      color: hsl(233, 8%, 62%);
+
+    }
+    .section3Gridlist img
+    {
+      width: 100%;
+    } 
     footer 
     {
       font-family: 'Public Sans', sans-serif;
