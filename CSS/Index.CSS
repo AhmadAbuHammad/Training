@@ -1,6 +1,7 @@
 body{
   font-family: 'Public Sans', sans-serif;
       Font-size: 18px;
+      width: 1440px;
 }
 .headerBox
     {
@@ -66,7 +67,7 @@ body{
       content: "";
       position: absolute;
       height: 3px;
-      width: 49px;
+      width: 60px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -83,7 +84,7 @@ body{
       background-image: linear-gradient(to right,#31d35c, #2bb7da);
       -webkit-transform: translateY(-15px);
       transform: translateY(-15px);
-      top: 6rem;
+      top: 5rem;
       opacity: 1;
       -webkit-transition: 0.3s;
       transition: 0.3s;
@@ -113,24 +114,21 @@ body{
     }
     .section1
     {
-      background: url("../images/bg-intro-desktop.svg");
-      background-repeat: no-repeat;
-      background-size: 60%;
-      background-position: right top;
-      display: -webkit-box;
-      display: -ms-flexbox;
+      width: 1440px;
+      margin: auto 0px;
+      background-color: hsl(0, 0%, 98%);
       display: flex;
-      -webkit-box-orient: horizontal;
+      justify-content: space-evenly;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      display: flex;
       -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
-       flex-direction: row-reverse;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
+      flex-direction: row-reverse;
       align-items: center;
       overflow: hidden;
+      padding: 2.5rem 1.5rem 1.5rem 4rem;
+
     }
     .section1Img
     {
@@ -144,12 +142,11 @@ body{
       background-repeat: no-repeat;
       
     }
-    .section1Img2
+    .section1Img img
     {
-        background-image: url('/images/bg-intro-desktop.svg');        
-        background-repeat: no-repeat;
-        background-position: center bottom;
-         
+      height: 0%;
+      width: 93%;
+      margin: -120px 0 0px 150px;
     }
     .section1Paragraph
     {
@@ -168,6 +165,7 @@ body{
       margin: 0 2rem 0.5rem;
       font-weight: 300;
       font-size: 0.9rem;
+      color:#9698a6 ;
     }
     .section1Paragraph button
     {
@@ -198,6 +196,72 @@ body{
       width: 80%;
       float: right;
     }
+    .sectioin2 {
+      background: #f3f4f6;
+      color: #2d314d;
+      width: 1440px;
+      margin: 0 0 0 0px;
+      padding: 2.5rem 1.5rem 1.5rem 4rem;
+    }
+    .sectioin2 p
+    {
+      color:#9698a6;
+    }
+    .sectioin2 .sectioin2entry {
+      padding: 4rem;
+      margin: 0 0 0 35px
+    }
+    
+    .sectioin2entry h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .sectioin2 .servicesitems {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr);
+          grid-template-columns: repeat(4, 1fr);
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      grid-gap: 30px;
+      padding: 0rem 0rem 2rem 5rem;
+    }
+    
+    .sectioin2 .servicesitems .servicesitem .yeah {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items:start;
+              
+      margin-top: 1rem;
+    }
+    .sectioin2 .servicesitems .servicesitem .yeah img
+    {
+    }
+    .sectioin2 .servicesitems .servicesitem .servicestexts h2 {
+      margin: 20px 0 10px;
+      text-align: left;
+    }
+    
+    .sectioin2 .servicesitems .servicesitem .servicestexts p {
+      text-align: left;
+      font-size: 18px;
+    }
+
     footer 
     {
       font-family: 'Public Sans', sans-serif;
@@ -205,7 +269,7 @@ body{
       width: 1440px;
       background: #2d314d;
       padding: 2.5rem 1.5rem 1.5rem 4rem;
-      margin: 0px 0px 0px -7px ;
+      margin: 0px 0px 0px 0px ;
     }
     .footerStyle
     {
