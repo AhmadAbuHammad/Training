@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    width: 75px;
+    background: #ffffff;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:    space-around;
+    border-right: 1px solid #eee;
+    flex-wrap: nowrap;
+    box-shadow: 0 2px 4px rgba(15, 34, 58, .12)
+}
+
+/* .Container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    justify-content: space-between;
+    width: 75px;
+} */
+.chat-logo img {
+    width: 30px;
+}
+.other-logos div {
+    display: none;
+}
+.other-logos img {
+    width: 28px;
+}
+.nav-bar a
+{
+    text-align: center;
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    line-height: 56px;
+    border-radius: 8px;
+    padding: 0px;
+}
+.hidden-logs {
+    display: contents;
+}
+.nav-bar a svg {
+    fill:#7a7f9a ;
+}
+.nav-bar a svg:active {
+   
+    
+    fill:#3124e8;
+}
+.active-logo {
+    text-align: center;
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    line-height: 56px;
+    border-radius: 8px;
+    padding: 0px;
+    background-color:#f7f7ff ! important;
+} 
+.active-logo a svg {
+    fill:#3124e8;
+}
+.nav-bar a:active {
+   
+    background-color: #f7f7ff;
+}
+.profile-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.nav-bar a svg {
+    margin: -4px auto;
+}
+
+@media (max-width: 991px) {
+    .nav-bar {
+        position: fixed;
+        bottom: 0;
+        height: 72px;
+        border-top: 1px solid #fff;
+        flex-direction:row;
+        max-width: 991px;
+        min-width: 991px;
+    }
+    .active-logo{
+        text-align: center;
+        font-size: 24px;
+        width: 56px;
+        height: 56px;
+        margin: 0;
+        line-height: 56px;
+        border-radius: 8px;
+        padding: 0px;
+        background-color:#f7f7ff ! important;
+    }
+    .chat-logo {
+        display: none;
+    }
+    .nav-bar a svg {
+        margin: 0 ;
+    }
+    .hidden-logs {
+        display: none;
+    }
+    .nav-bar a {
+        margin: 0;
+    }
+}
