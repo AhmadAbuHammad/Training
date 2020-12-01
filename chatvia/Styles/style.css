@@ -32,10 +32,6 @@ body {
 .icons svg {
     fill:#7a7f9a ;
 }
-.active-icon :active {
-    /* fill:#3124e8; */
-    
-}
 .active-icon svg
 {
     fill:#3124e8;
@@ -76,7 +72,7 @@ a.icons.active-icon  {
         height: 72px;
         border-top: 1px solid #fff;
         flex-direction:row;
-        width: 100%;
+        width: 991px;
     }
     .active-logo{
         text-align: center;
