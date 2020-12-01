@@ -1,33 +1,37 @@
 body {
+    font-family: "Public Sans",sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    color: #495057;
     margin: 0;
     padding: 0;
 }
 .nav-bar {
-    width: 75px;
+    align-items: center;
     background: #ffffff;
-    position: fixed;
-    height: 100vh;
+    border-right: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(15, 34, 58, .12);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content:space-evenly;
-    border-right: 1px solid #eee;
     flex-wrap: nowrap;
-    box-shadow: 0 2px 4px rgba(15, 34, 58, .12)
+    height: 100vh;
+    justify-content:space-evenly;
+    position: fixed;
+    width: 75px;
 }
 .chat-logo img {
     width: 30px;
 }
 .icons {
-    width: 26px;
-    height: 26px;
     border-radius: 8px;
+    height: 26px;
     padding: 12px;
+    width: 26px;
 }
 .icons svg
 {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 .icons svg {
     fill:#7a7f9a ;
@@ -35,55 +39,78 @@ body {
 .active-icon svg
 {
     fill:#3124e8;
-    /* background-color: #f7fdff; */
+    
 }
 a.icons.active-icon  {
     background-color: #f7fdff;
 }
 
 .active-logo {
-    text-align: center;
-    font-size: 24px;
-    width: 56px;
-    height: 56px;
-    margin: 0 auto;
-    line-height: 56px;
-    border-radius: 8px;
-    padding: 0px;
     background-color:#f7f7ff ! important;
+    border-radius: 8px;
+    font-size: 24px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+    width: 56px;
 } 
 .profile-photo img {
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
+    height: 100%;
+    width: 100%;
 }
 .profile-photo 
 {
-    width: 30px;
     height: 30px;
+    width: 30px;
     
 }
-
-
+.chat-section {
+    background: rgb(230, 220, 220);
+    display: block;
+    height: 100vh;
+    position: fixed;
+    left: 75px;
+    width: 30%;
+}
+.header-chat {
+    
+    padding: 0px 26px;
+}
+.header-chat h4 {
+    font-size: 1.3125rem;
+    color: #495057;
+}
+.search-input a {
+    width: 24px;
+    height: 24px;
+}
+.search-input {
+    display: flex;
+    /* justify-content: center; */
+    
+}
 @media (max-width: 991px) {
     .nav-bar {
         
-        bottom: 0;
-        height: 72px;
         border-top: 1px solid #fff;
+        bottom: 0;
         flex-direction:row;
+        height: 72px;
         width: 991px;
     }
     .active-logo{
-        text-align: center;
-        font-size: 24px;
-        width: 56px;
-        height: 56px;
-        margin: 0;
-        line-height: 56px;
-        border-radius: 8px;
-        padding: 0px;
         background-color:#f7f7ff ! important;
+        border-radius: 8px;
+        font-size: 24px;
+        height: 56px;
+        line-height: 56px;
+        margin: 0;
+        padding: 0px;
+        text-align: center;
+        width: 56px;
     }
     .hidden {
         display: none;
