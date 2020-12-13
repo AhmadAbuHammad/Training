@@ -1,0 +1,30 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "javascript",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "eslint": "^7.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.21.5"
+  },
+  "scripts": {
+    "test": "jscript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmadAbuHammad/Training.git"
+  },
+  "keywords": [
+    "jscript"
+  ],
+  "author": "ahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmadAbuHammad/Training/issues"
+  },
+  "homepage": "https://github.com/AhmadAbuHammad/Training#readme"
+}
