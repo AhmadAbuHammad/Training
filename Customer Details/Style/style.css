@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    
+}
+h1 {
+    padding: 20px 0 20px 40px;
+    color: rgb(44, 51, 69);
+    font-size: 5vh;
+    font-weight: unset;
+    margin: 0;
+    margin-block: 0;
+}
+hr {
+    margin: 0;
+    margin-block: 0;
+    margin-inline: 0;
+    border-style: ridge;
+    border-width: 1px;
+}
+sup {
+    color: rgb(242, 58, 60);
+    font-size: 16px;
+    vertical-align: initial;
+}
+.firs-sec {
+    width: 40%;
+    padding: 10px 0 10px 40px;
+    /* height: 72%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 115px;
+}
+.firs-sec p {
+    margin-block: 0;
+}
+/* main-text: rgb(44, 51, 69); */
+/* secondary-text: rgb(87, 100, 126); */
+/* dark-red: rgb(242, 58, 60); */
+/* light-red: rgb(255, 237, 237); */
+/* dark-blue: rgb(46, 105, 255); */
+/* light-blue: rgb(241, 245, 255); */
+/* table-color: rgb(195, 202, 216); */
+/* green-color: rgb(24, 189, 91); */
