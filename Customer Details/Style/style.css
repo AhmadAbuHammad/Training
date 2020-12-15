@@ -1,0 +1,136 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    background-color: rgb(241, 245, 255);
+}
+
+.form-wrapper {
+    width: 700px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 16px;
+    padding: 30px 30px 30px 40px;
+    border-bottom: 1px solid rgb(216, 218, 219);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.form-data {
+    padding:  0 30px;
+}
+
+.form-section {
+    padding: 10px;
+    background: white;
+    margin:  10px 0;
+}
+.form-section:active {
+    background-color: #f1f5ff;
+}
+.form-section:focus-within {
+    background-color: #f1f5ff;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0 20px 0;
+}
+.form-input:last-child {
+    padding: 0;
+} 
+input {
+    border: 2px solid gainsboro;
+    border-radius: 4px;
+    height: 21px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+input[type="text" i] {
+    padding: 3px 5px;
+    margin-left: -2px;
+}
+.important {
+    padding: 0;
+}
+input:focus {
+    outline: none;
+}
+.title {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.title.required::after {
+    content: "*";
+    color: red;
+    margin: 0px 0 0px 8px;
+}
+
+.form-input .label {
+    font-size: 10px;
+    margin-bottom: 2px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs-wrapper .form-input {
+    width: calc(50% - 10px);
+}
+.horLine::before {
+    border-top: 1px solid #acb3b7;
+    display: block;
+    margin: 35px auto;
+    width: 98%;
+    content: "";
+}
+textarea {
+    border: 2px solid gainsboro;
+    border-radius: 4px;
+}
+textarea:focus {
+    outline: none;
+}
+.form-section.short input {
+    width: calc(50% - 30px);
+}
+.checkbox-input {
+    display: flex;
+    flex-direction: column;
+}
+.checkbox-input input {
+}
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.checkbox-input .label {
+    font-size: 13px;
+    height: 21px;
+}
+/* .form-section.Hline {
+    border-top: 2px solid rgb(216, 218, 219);
+    border-top: 2px solid rgb(216, 218, 219);
+    margin: 35px 10px 0 10px;
+    padding: 23px 0 0 0;
+} */
+
+/* @media only screen and (max-width: 600px) {
+    .form-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+} */
