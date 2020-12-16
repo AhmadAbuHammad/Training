@@ -44,6 +44,11 @@ header h1 {
     flex-direction: column;
     padding: 0px 0 20px 0;
 }
+.errForm-section {
+    /* padding: 10px; */
+    background: rgb(255, 237, 237);
+    /* margin:  10px 0; */
+}
 .form-input:last-child {
     padding: 0;
 } 
@@ -54,6 +59,10 @@ input {
     font-weight: 500;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
+}
+.errfield {
+    border : 2px solid #ffb1b1;
+    border-radius: 4px;
 }
 input[type="text" i] {
     padding: 3px 5px;
@@ -109,7 +118,7 @@ textarea:focus {
 .form-section.short input {
     width: calc(50% - 30px);
 }
-.form-section.short select {
+select {
     width: calc(50% - 18px);
     height: 34px;
     border: 2px solid gainsboro;
@@ -119,6 +128,9 @@ textarea:focus {
     background-color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
+}
+select:focus {
+    outline: none;
 }
 /* select:required:invalid {
     color: #666;
