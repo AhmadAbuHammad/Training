@@ -2,8 +2,20 @@ html,body {
     height: 100%;
     margin: 0px;
 }
-
-
+h1 {
+    font-size: 68px;
+    margin-block-start: 22px;
+    margin-block-end: 0;
+    color: #1c232d;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.section1city {
+    color: #d2cccc;
+    font-weight: 500;
+    font-family: system-ui;
+    font-size: 13px;
+}
 .parent {
     height: 100%;
     display: flex;
@@ -12,11 +24,27 @@ html,body {
     justify-content: center;
     background-color: #f6f5f6;
 }
-
-.center.first {
-    background-color: ;
+.block1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.icon {
+    width: 31px;
+    margin-left: -7px;
+}
+.temp {
+    font-size: 11.5px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+/* .center.first {
+    background-color: ;
+} */
 .center {
+    display: flex;
+    justify-content: space-around;
     background-color: #fffffa;
     width: 338px;
     height: 139px;
