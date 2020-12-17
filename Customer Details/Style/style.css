@@ -10,6 +10,8 @@ body, html {
     width: 700px;
     background-color: #ffffff;
     margin: 0 auto;
+    position: inherit;
+    display: block;
 }
 
 header h1 {
@@ -42,6 +44,12 @@ header h1 {
     flex-direction: column;
     padding: 0px 0 20px 0;
 }
+
+.errForm-section {
+    /* padding: 10px; */
+    background: rgb(255, 237, 237);
+    /* margin:  10px 0; */
+}
 .form-input:last-child {
     padding: 0;
 } 
@@ -53,11 +61,18 @@ input {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 }
+
+.errfield {
+    border : 2px solid #ffb1b1;
+    border-radius: 4px;
+}
 input[type="text" i] {
     padding: 3px 5px;
     margin-left: -2px;
 }
+
 .important {
+
     padding: 0;
 }
 input:focus {
@@ -107,11 +122,46 @@ textarea:focus {
 .form-section.short input {
     width: calc(50% - 30px);
 }
+
+select {
+    width: calc(50% - 18px);
+    height: 34px;
+    border: 2px solid gainsboro;
+    border-radius: 4px;
+    /* height: 21px; */
+    font-weight: 500;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+select:focus {
+    outline: none;
+}
+/* select:required:invalid {
+    color: #666;
+} */
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: #000;
+}
+.hide {
+    display: none;
+}
+=======
+
 .checkbox-input {
     display: flex;
     flex-direction: column;
 }
 .checkbox-input input {
+
+    height: 21px;
+    margin: 0 0 0px 0;
+    padding: 0;
+    width: 18px;
+
 }
 .checkbox-wrapper {
     display: flex;
@@ -119,18 +169,67 @@ textarea:focus {
 }
 .checkbox-input .label {
     font-size: 13px;
-    height: 21px;
-}
-/* .form-section.Hline {
-    border-top: 2px solid rgb(216, 218, 219);
-    border-top: 2px solid rgb(216, 218, 219);
-    margin: 35px 10px 0 10px;
-    padding: 23px 0 0 0;
-} */
 
-/* @media only screen and (max-width: 600px) {
-    .form-wrapper {
-        width: 100%;
-        margin: 0;
-    }
-} */
+    vertical-align: super;
+}
+.form-submit {
+    padding: 30px 30px 30px 45px;
+    border-top: 1px solid gainsboro;
+}
+
+.form-submit input {
+    height: 52px;
+    width: 168px;
+    background-color: rgb(24, 189, 91);
+    border: white;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+}
+.successful {
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.part {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+}
+.part img {
+    width: 120px;
+    height: 120px;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.block1 {
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 6px;
+    color: white;
+    background: red;
+    height: 21px;
+
+}

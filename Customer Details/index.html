@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="Style/style.css">
+
         <link rel="stylesheet" href="/Github Training/Training/Customer Details/Style/style.css">
+
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
@@ -11,6 +14,19 @@
                 <h1>Customer Details:</h1>
             </header>
       
+
+            <form action="asdasdasd" autocomplete="off" class="person-form">
+                <div class="form-data">
+                    <div class="form-section req">
+                      <span class="title required">Full Name</span>
+                      <div class="inputs-wrapper">
+                          <div class="form-input noPadding">
+                              <input class="reqfield" type="text" name = "Fname" />
+                              <span class="label">First Name</span>
+                          </div>
+                          <div class="form-input">
+                              <input class="reqfield" type="text" name = "Lname" />
+
             <form autocomplete="on">
                 <div class="form-data">
                     <div class="form-section">
@@ -22,11 +38,31 @@
                           </div>
                           <div class="form-input">
                               <input type="text" />
+
                               <span class="label">Last Name</span>
                           </div>
                       </div>
                     </div>
   
+
+                    <div class="form-section req">
+                      <span class="title required">Address</span>
+                      <div class="form-input">
+                          <input class="reqfield" type="text" name = "streetAddress"/>
+                          <span class="label">Street Address</span>
+                      </div>
+                      <div class="form-input">
+                          <input type="text" name = "street2"/>
+                          <span class="label">Street Address Line 2</span>
+                      </div>
+                      <div class="inputs-wrapper">
+                          <div class="form-input">
+                              <input class="reqfield" type="text"  name = "city"/>
+                              <span class="label">City</span>
+                          </div>
+                          <div class="form-input">
+                              <input class="reqfield" type="text" name = "state" />
+
                     <div class="form-section">
                       <span class="title required">Address</span>
                       <div class="form-input">
@@ -44,30 +80,66 @@
                           </div>
                           <div class="form-input">
                               <input type="text" />
+
                               <span class="label">state</span>
                           </div>
                       </div>
                       <div class="form-input">
+
+                          <input class="reqfield" type="text" name = "zipcode"/>
+
                           <input type="text" />
+
                           <span class="label">Zip code</span>
                       </div>
                     </div>
   
+
+                    <div class="form-section short req">
+                      <span class="title required">Phone Number</span>
+                      <div class="form-input">
+                          <input class="reqfield" type="text" placeholder="(000) 000-0000" name="phone"/>
+
                     <div class="form-section short">
                       <span class="title required">Phone Number</span>
                       <div class="form-input">
                           <input type="text" placeholder="(000) 000-0000"/>
+
                       </div>
                     </div>
                     <div class="form-section short">
                       <span class="title">E-mail</span>
                       <div class="form-input">
+
+                          <input type="text" placeholder="ex: email@yahoo.com" name="email"/>
+
                           <input type="text" placeholder="ex: email@yahoo.com"/>
+
                           <span class="label">example@example.com</span>
                       </div>
                     </div>
                     <div class="horLine">
                     </div>
+
+                    <div class="form-section short req">
+                        <span class="title required">How did you here about us?</span>
+                        <div class="form-input">
+                            <!-- onchange="showOther('hide', this)" -->
+                            <select name="aboutUs"  class="selectOther reqfield">
+                                <option value="" disabled selected>Please select</option>
+                                <option value="Newspaper">Newspaper</option>
+                                <option value="Internet">Internet</option>
+                                <option value="Magazine">Magazine</option>
+                                <option value="1">Other (Please specify...)</option>
+                                <option value="None">None</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-section short hide req">
+                        <span class="title required">Other</span>
+                      <div class="form-input">
+                          <input class="reqfield" type="text" name="other"/>
+
                     <div class="form-section">
                         <span class="title required">How did you here about us?</span>
                         <div class="form-input">
@@ -80,6 +152,7 @@
                         <span class="title required">Other</span>
                       <div class="form-input">
                           <input type="text"/>
+
                       </div>
                     </div>
                     <div class="form-section">
@@ -113,12 +186,54 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-section">
+                        <span class="title">Please give reference of any two people whome you feel:</span>
+                        <table id="input-form">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Address</th>
+                                    <th>Contact Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" id="R-1-Fname" name="R-1-Fname" value=""></td>
+                                    <td><input type="text" id="R-1-Adress" name="R-1-Adress" value=""></td>
+                                    <td><input type="text" id="R-1-contact-number" name="R-1-contact-number" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><input type="text" id="R-2-Fname" name="R-2-Fname" value=""></td>
+                                    <td><input type="text" id="R-2-Adress" name="R-2-Adress" value=""></td>
+                                    <td><input type="text" id="R-2-contact-number" name="R-2-contact-number" value=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" value="submit"/>
+                </div>
+            </form>
+        </div>
+        <div class="successful">
+            <div class="part">
+                <img src="Image/Tick-Graphic.png" alt="">
+                <h1>Thank you!</h1>
+                <span>Your submition has been received.</span>
+            </div>
+        </div>
+    <script src="JavaScript/javaScript.js"></script>
+
                 </div>
                 <div class="form-submit">
                 </div>
             </form>
         </div>
   
-      <!-- <script src="scripts/script.js"></script> -->
     </body>
 </html>
