@@ -44,7 +44,6 @@ header h1 {
     flex-direction: column;
     padding: 0px 0 20px 0;
 }
-
 .errForm-section {
     /* padding: 10px; */
     background: rgb(255, 237, 237);
@@ -61,7 +60,6 @@ input {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 }
-
 .errfield {
     border : 2px solid #ffb1b1;
     border-radius: 4px;
@@ -70,9 +68,7 @@ input[type="text" i] {
     padding: 3px 5px;
     margin-left: -2px;
 }
-
-.important {
-
+.noPadding {
     padding: 0;
 }
 input:focus {
@@ -122,7 +118,6 @@ textarea:focus {
 .form-section.short input {
     width: calc(50% - 30px);
 }
-
 select {
     width: calc(50% - 18px);
     height: 34px;
@@ -149,19 +144,16 @@ option {
 .hide {
     display: none;
 }
-=======
-
 .checkbox-input {
     display: flex;
     flex-direction: column;
 }
 .checkbox-input input {
-
     height: 21px;
     margin: 0 0 0px 0;
     padding: 0;
     width: 18px;
-
+    border: 3px solid gainsboro;
 }
 .checkbox-wrapper {
     display: flex;
@@ -169,7 +161,6 @@ option {
 }
 .checkbox-input .label {
     font-size: 13px;
-
     vertical-align: super;
 }
 .form-submit {
@@ -230,6 +221,57 @@ option {
     margin-top: 6px;
     color: white;
     background: red;
-    height: 21px;
-
 }
+/* .form-section.Hline {
+    border-top: 2px solid rgb(216, 218, 219);
+    border-top: 2px solid rgb(216, 218, 219);
+    margin: 35px 10px 0 10px;
+    padding: 23px 0 0 0;
+} */
+
+/* @media only screen and (max-width: 600px) {
+    .form-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+} */
+/*
+.head-sec h1 {
+    padding: 25px 0 25px 49px;
+    color: rgb(44, 51, 69);
+    font-weight: unset;
+    margin: 0;
+    margin-block: 0;
+}
+hr {
+    margin: 0;
+    margin-block: 0;
+    margin-inline: 0;
+    border-style: ridge;
+    border-width: 1px;
+}
+sup {
+    color: rgb(242, 58, 60);
+    font-size: 16px;
+    vertical-align: initial;
+}
+.firs-sec {
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+.firs-sec p {
+    margin-block: 0;
+} */
+/* main-text: rgb(44, 51, 69); */
+/* secondary-text: rgb(87, 100, 126); */
+/* dark-red: rgb(242, 58, 60); */
+/* light-red: rgb(255, 237, 237); */
+/* dark-blue: rgb(46, 105, 255); */
+/* light-blue: rgb(241, 245, 255); */
+/* table-color: rgb(195, 202, 216); */
+/* green-color: rgb(24, 189, 91); */
+
+/* dss */
