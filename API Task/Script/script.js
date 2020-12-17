@@ -5,9 +5,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.log(data);
             drawWeather(data)
         });
-    
+
+        var getDaysInMonth = function(month,year) {
+           return new Date(year, month, 0).getDate();
+          };
+
+
     const today = new Date();
-    const currtime = today.getHours()
+    let thisDay = today.getDate();
+    
     function drawWeather(d) {
         const celcius = Math.round(parseFloat(d.list[0].main.temp));
         const { description } = d.list[0].weather[0];
@@ -16,39 +22,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let iconcode = d.list[0].weather[0].icon;
         let iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
         document.getElementById('icon').src = iconurl;
-        for(let i = 1; i < 4; i++) {
-            const innCelcius = Math.round(parseFloat(d.list[i].main.temp));
 
-            let iDiv = document.createElement('div');
-            iDiv.className = 'block1';
+        let c = `<div class = "section2 center">`;
+            for(let i =1; i < 40; i++) {
+                console.log(gitdate(d.list[i].dt_txt) != Number(thisDay));
+                console.log(Number(gitdate(d.list[i].dt_txt)));
+                console.log(Number(thisDay));
+                if (Number(gitdate(d.list[i].dt_txt)) != Number(thisDay)) {
+                    c += `</div>`;
+                    document.querySelector('.parent').innerHTML += c;
+                    if(i == 39)
+                    break;
+                    c = `<div class="section2 center">`;
+                    thisDay++;
+                    thisDay = checkThisDay(thisDay);
+                }
+                // console.log(checkThisDay(thisDay++));
+                    const innCelcius = Math.round(parseFloat(d.list[i].main.temp));
+                    let iconInner = d.list[i].weather[0].icon;
+                    let iconInnUrl = "http://openweathermap.org/img/wn/" + iconInner + "@2x.png";
+                    c +=`<div class="block1"><div class="temp">${innCelcius}&deg;</div><img class="icon" src="${iconInnUrl}"/><div class="time">${Number(time(d.list[i].dt_txt))}:00</div><div class="AmBM">${checkAmPm(d.list[i].dt_txt)}</div></div>`
+                if (i == 39)
+                {
+                    c += `</div>`;
+                    document.querySelector('.parent').innerHTML += c;
+                }    
             
-            let inn1Div = document.createElement('div');
-            inn1Div.className = 'temp';
-            inn1Div.innerHTML = `${innCelcius}&deg;`;
-
-            let image = document.createElement('img');
-            let iconInner = d.list[i].weather[0].icon;
-            let iconInnUrl = "http://openweathermap.org/img/wn/" + iconInner + "@2x.png";
-            image.className = 'icon';
-            image.src= iconInnUrl;
-            
-            let inn2Div = document.createElement('div');
-            inn2Div.className = 'time';
-            inn2Div.innerHTML =  time(d.list[i].dt_txt) + ":00";
-
-            let inn3Div = document.createElement('div');
-            inn3Div.className = 'AmBM';
-            inn3Div.innerHTML =  checkAmPm(d.list[i].dt_txt);
-
-            let c =`<div class="block1"><div class="temp">${innCelcius}&deg;</div><img class="icon" src="${iconInnUrl}"><div class="time">${time(d.list[i].dt_txt)}:00</div><div class="AmBM">${checkAmPm(d.list[i].dt_txt)}</div></div>`
-
-            document.querySelector('.section2').innerHTML += c;
-            // appendChild(iDiv);
-            // document.querySelector('.block1').appendChild(inn1Div);
-            // document.querySelector('.block1').appendChild(image);
-            // document.querySelector('.block1').appendChild(inn2Div);
-            // document.querySelector('.block1').appendChild(inn3Div);
-        }
+            }
+    }
+    function checkThisDay(now) {
+        let s = getDaysInMonth(today.getMonth()+1, today.getFullYear());
+        if( now > s)
+        return  now - s;
+        else
+        return now
+        
+    }
+    function gitdate(txtDate) {
+        const day = txtDate.slice(8,10);
+        return day;
     }
     function time(txtDate) {
         
