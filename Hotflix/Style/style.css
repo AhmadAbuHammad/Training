@@ -1,11 +1,18 @@
-.ion-ios-search:before {
-    content: "\f4a5";
-}
 html, body {
     background-color: #1a191f;
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+}
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+    transition-property: color, background-color, border-color, opacity;
 }
 .header {
     display: block;
@@ -17,6 +24,8 @@ html, body {
     z-index: 101;
     -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 .container {
@@ -25,14 +34,15 @@ html, body {
     padding-right: 0;
     padding-left: 0;
     margin: 0 auto;
+    align-items: center;
 }
 .header__auth {
     display: flex;
     align-items: center;
-    margin-left: calc( 100% - 795px );
+    margin-left: calc( 100% - 1073px );
 }
 .header__nav-item {
-    padding-left: 30px;
+    padding-right: 47px;
 }
 .header__nav {
     display: flex;
@@ -40,55 +50,106 @@ html, body {
     margin-block: 0;
     padding-inline-start: 0;
     align-items: center;
-    margin-left: calc( 100% - 1231px );
+    margin-left: calc( 100% - 1184px );
 }
-.headerLogo img {
+.Logo img {
     width: 100%;
     max-width: 110px;
     display: block;
 }
-a {
-    color: #ffffff;
+.header a {
+    color: rgba(255,255,255,0.7);;
     text-decoration: none;
 }
-.headerLogo {
+.Logo {
     display: flex;
     height: 70px;
     width: 100px;
 }
 .header__search {
     display: -webkit-flex;
-    display: -ms-flexbox;
-    -moz-box-direction: row;
-    -ms-flex-pack: start;
-    -ms-flex-align: center;
-    padding: 0 15px;
-    pointer-events: none;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
     transition: 0.4s;
 }
 .header__search-input {
-    width: 240px;
-    height: 40px;
-    /* -webkit-border-radius: 6px; */
+    width: 207px;
+    height: 32px;
     border-radius: 6px;
     background-color: rgba(210,201,255,0.04);
     border: 1px solid transparent;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     letter-spacing: 0.4px;
     padding: 0 0 0 20px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .header__search-input::placeholder {
-    color: #fff;
+    color: rgba(255,255,255,0.7);;
     opacity: 1; /* Firefox */
   }
-  
-  .header__search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #fff;
-  }
-  
-  .header__search-input::-ms-input-placeholder { /* Microsoft Edge */
-   color: #fff;
-  }
+  .header__sign-in {
+    height: 40px;
+    width: 120px;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-align-items: center;
+    border-radius: 6px;
+    border: 1px solid #ffd80e;
+}
+.header__search-button {
+    cursor: pointer;
+    right: 20px;
+    position: relative;
+    color: rgba(255,255,255,0.6);
+}
+.lang {
+    padding: 0 44px 0 26px;
+}
+footer {
+    background-color: #1a191f;
+    border-top: 1px solid rgba(210,201,255,0.1);
+    position: fixed;
+    bottom: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #1a191f;
+    z-index: 101;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    font-size: 13px;
+}
+.footerCopyright {
+    margin-left: 40px;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255,255,255,0.3);
+}
+.footerNav {
+    list-style-type: none;
+    margin-block: 0;
+    margin-left: calc( 100% - 614px );
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 80px;    
+}
+.footerNav a {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: rgba(255,255,255,0.7);;
+    text-decoration: none;
+    padding-right: 39px;
+}
+.footerBackArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffd80e;
+    color: rgba(255,255,255,0.6);
+    background-color: #1a191f;
+    border-radius: 6px;
+    cursor: pointer;
+}
