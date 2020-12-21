@@ -4,6 +4,23 @@ html, body {
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
+.header a:focus {
+    color: #ffd80e;
+}
+.headerSearchBtn {
+    display: none;
+    align-items: center;
+}
+.header a:hover {
+    color: #ffd80e;
+}
+.footerNav a:hover   {
+    color: #ffd80e;
+}
+input:focus {
+    outline: unset;
+    border-color: #ffd80e;
+}
 button {
     padding: 0;
     border: none;
@@ -27,7 +44,9 @@ button {
     text-transform: uppercase;
     font-size: 13px;
 }
-
+.headerMenuBtn {
+    display: none;
+}
 .container {
     width: 1270px;
     display: flex;
@@ -39,7 +58,7 @@ button {
 .header__auth {
     display: flex;
     align-items: center;
-    margin-left: calc( 100% - 1073px );
+    margin-left: calc( 100% - 1079px );
 }
 .header__nav-item {
     padding-right: 47px;
@@ -85,11 +104,23 @@ button {
 .header__search-input::placeholder {
     color: rgba(255,255,255,0.7);;
     opacity: 1; /* Firefox */
-  }
-  .header__sign-in {
+}
+.closeSearch {
+    display: none;
+}
+.header__sign-in {
     height: 40px;
     width: 120px;
     display: -webkit-flex;
+    justify-content: center;
+    -webkit-align-items: center;
+    border-radius: 6px;
+    border: 1px solid #ffd80e;
+}
+.headerSigninIcon {
+    display: none;
+    height: 40px;
+    width: 40px;
     justify-content: center;
     -webkit-align-items: center;
     border-radius: 6px;
@@ -125,6 +156,13 @@ footer {
     line-height: 14px;
     color: rgba(255,255,255,0.3);
 }
+.footerCopyrightHide {
+    display: none;
+    margin-left: 40px;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255,255,255,0.3);
+}
 .footerNav {
     list-style-type: none;
     margin-block: 0;
@@ -152,4 +190,117 @@ footer {
     background-color: #1a191f;
     border-radius: 6px;
     cursor: pointer;
+}
+@media (max-width: 1270px) {
+    .container {
+        width: calc( 100% - 100px );
+    }
+    .header__nav {
+        margin-left: auto;
+    }
+    .header__auth {
+        margin-left: auto;
+    }
+}
+@media (max-width: 1100px) {
+    .header__auth {
+        width: 170px;
+        justify-content: space-between;
+    }
+    .headerMenuBtn {
+        display: block;
+    }
+    .lang {
+        padding: 0;
+    }
+    .headerSearchBtn {
+        display: block;
+    }
+    .closeSearch {
+        display: block;
+    }    
+    .header__nav {
+        display: none;
+        top: 80px;
+        width: 430px;
+        -moz-transform: translate3d(260px, 0, 0);
+        transform: translate3d(260px, 0, 0);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background-color: #1a191f;
+        z-index: 99;
+        padding: 30px 30px 0;
+        transition: 0.4s ease;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    }
+    .header__nav-item {
+        padding-bottom: 16px;
+    }
+    .footerNav {
+        margin-left: 0;
+        height: 0;
+        margin-bottom: 25px;
+    }
+    .footerCopyright {
+        display: none;
+    }
+    .footerCopyrightHide {
+        display: block;
+        margin: 0;
+    }
+    footer .container {
+        height: 146px;
+        flex-direction: column;
+        align-items: unset;
+    }
+    .lastSec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .headerSigninIcon{
+
+        display: -webkit-flex;
+    }
+    .header__sign-in {
+        display: none;
+    }
+
+    .header__search {
+        display: none;
+        position: absolute;
+        background-color: #1a191f;
+        top: 0;
+        right: -15px;
+        left: -15px;
+        bottom: 0;
+        z-index: 1;
+        display: none;
+        align-items: center;
+        padding: 0 65px;
+        transition: 0.4s;
+    }
+}
+@media (max-width: 413px) {
+    .container {
+        width: calc( 100% - 33px );
+    }
+    .footerNav a {
+        padding-right: 12px;
+     }
+     
+    .header__search--active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .header__search {
+        
+        padding: 0 32px;
+    }
 }
