@@ -432,6 +432,10 @@ button {
         padding: 30px 30px 0;
         transition: 0.4s ease;
         box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+        -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
     }
     .header__nav-item {
         padding-bottom: 16px;
@@ -515,6 +519,10 @@ button {
     .moviescol img {
         width: 152px;
         height: 228px;
+    }
+    .play:hover::before {
+        margin-left: 42px;
+    margin-top: 84px;
     }
 }
 @media (max-width: 413px) {
