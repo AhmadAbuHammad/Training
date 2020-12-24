@@ -38,13 +38,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (element.release_date &&  element.poster_path ) {
                 htmlCards += 
                 `<div class = "moviescol">
-                    <a class = "play" href="#">
+                    <a class = "play" href="moredetails.html?id=${element.id}">
                         <div class = "poster">
                             <span class = "voteRange">${checkVote(element.vote_average)}</span>
                             <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
                         </div>
-                    </a>    
-                    <a href="#" title = "${element.title}">
+                    </a>   
+                    <a href="moredetails.html?id=${element.id}" title = "${element.title}">
                     <div class = "movieTitle">${element.title}</div>
                     <div class ="releaseDate">${element.release_date.slice(0,4)}</div>
                     </a>
@@ -52,13 +52,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }else if (element.release_date === '') {
                 htmlCards += 
                 `<div class = "moviescol">
-                    <a class = "play" href="#">
+                    <a class = "play" href="moredetails.html?id=${element.id}">
                         <div class = "poster">
                             <span class = "voteRange">${checkVote(element.vote_average)}</span>
                             <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
                         </div>
                     </a>    
-                    <a href="#" title = "${element.title}">
+                    <a href="moredetails.html?id=${element.id}" title = "${element.title}">
                     <div class = "movieTitle">${element.title}</div>
                     <div class ="releaseDate">old movie</div>
                     </a>
@@ -66,13 +66,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }else if (element.poster_path === null) {
                 htmlCards += 
                 `<div class = "moviescol">
-                    <a class = "play" href="#">
+                    <a class = "play" href="moredetails.html?id=${element.id}">
                         <div class = "poster">
                             <span class = "voteRange">${checkVote(element.vote_average)}</span>
                             <img src="" alt="">
                         </div>
                     </a>    
-                    <a href="#" title = "${element.title}">
+                    <a href="moredetails.html?id=${element.id}" title = "${element.title}">
                     <div class = "movieTitle">${element.title}</div>
                     <div class ="releaseDate">old movie</div>
                     </a>
