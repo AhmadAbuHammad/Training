@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function fetchData() {
         isLoading = true;
-        // console.log('Aa%20Okkati%20Adakku%20');
         let movieName = window.location.search.slice(4);
         
             let data = fetch(`https://api.themoviedb.org/3/search/movie?api_key=00a40d32da148e834ad60e85aa769f38&language=en-US&query=${movieName}&page=${page}`)
@@ -86,7 +85,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     </a>    
                     <a href="#" title = "${element.title}">
                     <div class = "movieTitle">${element.title}</div>
-                    <div class ="releaseDate">old movie</div>
+                    <div class ="releaseDate">${element.release_date.slice(0,4)}</div>
                     </a>
                 </div>`;
             }
