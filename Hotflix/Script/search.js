@@ -49,38 +49,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (element.release_date &&  element.poster_path ) {
                 htmlCards += 
                 `<div class = "moviescol">
-                    <a class = "play" href="#">
+                    <a class = "play" href="moredetails.html?id=${element.id}">
                         <div class = "poster">
                             <span class = "voteRange">${checkVote(element.vote_average)}</span>
                             <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
-                        </div>
-                    </a>    
-                    <a href="#" title = "${element.title}">
-                    <div class = "movieTitle">${element.title}</div>
-                    <div class ="releaseDate">${element.release_date.slice(0,4)}</div>
-                    </a>
-                </div>`;
-            }else if (element.release_date === null) {
-                htmlCards += 
-                `<div class = "moviescol">
-                    <a class = "play" href="#">
-                        <div class = "poster">
-                            <span class = "voteRange">${checkVote(element.vote_average)}</span>
-                            <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
-                        </div>
-                    </a>    
-                    <a href="#" title = "${element.title}">
-                    <div class = "movieTitle">${element.title}</div>
-                    <div class ="releaseDate">old movie</div>
-                    </a>
-                </div>`;
-            }else if (element.poster_path === null) {
-                htmlCards += 
-                `<div class = "moviescol">
-                    <a class = "play" href="#">
-                        <div class = "poster">
-                            <span class = "voteRange">${checkVote(element.vote_average)}</span>
-                            <img src="" alt="">
                         </div>
                     </a>    
                     <a href="#" title = "${element.title}">
@@ -89,6 +61,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     </a>
                 </div>`;
             }
+            // else if (element.release_date === null) {
+            //     htmlCards += 
+            //     `<div class = "moviescol">
+            //         <a class = "play" href="#">
+            //             <div class = "poster">
+            //                 <span class = "voteRange">${checkVote(element.vote_average)}</span>
+            //                 <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
+            //             </div>
+            //         </a>    
+            //         <a href="#" title = "${element.title}">
+            //         <div class = "movieTitle">${element.title}</div>
+            //         <div class ="releaseDate">old movie</div>
+            //         </a>
+            //     </div>`;
+            // }else if (element.poster_path === null) {
+            //     htmlCards += 
+            //     `<div class = "moviescol">
+            //         <a class = "play" href="#">
+            //             <div class = "poster">
+            //                 <span class = "voteRange">${checkVote(element.vote_average)}</span>
+            //                 <img src="" alt="">
+            //             </div>
+            //         </a>    
+            //         <a href="#" title = "${element.title}">
+            //         <div class = "movieTitle">${element.title}</div>
+            //         <div class ="releaseDate">${element.release_date.slice(0,4)}</div>
+            //         </a>
+            //     </div>`;
+            // }
         });
         
         document.querySelector('.col2').innerHTML += htmlCards;

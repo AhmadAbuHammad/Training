@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         movies.forEach(element => {
             c += 
             `<div class = "moviescol">
-                <a class = "play" href="#">
+                <a class = "play" href="moredetails.html?id=${element.id}">
                     <div class = "poster">
                         <span class = "voteRange">${checkVote(element.vote_average)}</span>
                         <img src="https://image.tmdb.org/t/p/w200/${element.poster_path}" alt="">
@@ -46,7 +46,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
             </div>`;
         });
         
-        document.querySelector('.col').innerHTML = c;
+        document.querySelector('.col').innerHTML += c;
+        $('.col').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1240,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 1012,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 784,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+          });
     }
     function checkVote (e) {
 
@@ -56,10 +89,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return e;
     }
     
-    
-    // $('.col').slick({
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3
-    //   });
 });
