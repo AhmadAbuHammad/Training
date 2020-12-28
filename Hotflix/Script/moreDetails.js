@@ -181,9 +181,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 <img src="Images/arrow-right-s-line.svg" alt="">
             </button>
         </div>`;
-        let htmlCards = '';
+        let htmlCard = '';
         movies.forEach(element => {
-            htmlCards += 
+            if (element.release_date &&  element.poster_path ) {
+            htmlCard += 
             `<div class = "moviescol">
                 <a class = "play" href="moredetails.html?id=${element.id}">
                     <div class = "poster">
@@ -196,9 +197,44 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 <div class ="releaseDate">${element.release_date.slice(0,4)}</div>
                 </a>
             </div>`;
+            }
         });
         
-        document.querySelector('.col').innerHTML = htmlCards;
+        document.querySelector('.col').innerHTML += htmlCard;
+        $('.col').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1240,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 1012,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 784,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+          });
         }
      
     function checkVote (e) {

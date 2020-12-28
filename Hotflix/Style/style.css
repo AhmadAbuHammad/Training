@@ -15,6 +15,19 @@ body {
 main {
     min-height: calc(100% - 80px);
 }
+.spaceing {
+    overflow: hidden;
+    width: calc(35px - 35px);
+    padding: 0 30px;
+    position: relative;
+}
+.tobRatedNav img:focus {
+    outline: none;
+}
+.tobRatedNav:focus {
+    border: none;
+    outline: none;
+}
 .movieTrailer {
     display: none;
     position: fixed;
@@ -279,8 +292,8 @@ button {
 .col {
     display: flex;
     width: 100%;
-    overflow: hidden;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .play:hover::before {
@@ -290,10 +303,7 @@ button {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.col .moviescol {
-    padding-right: 33px;
-}
-.col2 .moviescol {
+.moviescol {
     padding-bottom: 10px;
     overflow: hidden;
     width: calc(20% - 14px);
@@ -301,11 +311,11 @@ button {
     position: relative;
 }
 .moviescol img {
-    width: 249px;
-    height: 367px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-}
+
 .home__title h1 {
     font-size: 31px;
     font-weight: 100;
@@ -352,14 +362,13 @@ button {
     position: absolute;
     z-index: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(26,25,31,0.7);
     border: 1px solid #fff;
     border-radius: 50%;
-    margin-left: 15px;
-    margin-top: 17px;
     padding: 7px;
+    left: 12%;
+    top: 12%;
+    transform: translate(-12%, -12%);
 }
 .allDetails {
     font-size: 13px;
@@ -412,13 +421,11 @@ button {
     padding: 0;
 }
 .bigPoster {
-    width: 700px;
-    height: auto;
     margin: 0 auto -4px auto;
 }
-.bigPoster img {    
-    width: 700px;
-    height: 393px;
+.bigPoster img {
+    width: 100%;
+    object-fit: cover;
 }
 .footerCopyright {
     margin-left: 40px;
@@ -482,18 +489,13 @@ button {
         width: calc( 100% - 100px );
     }
 }
-@media (max-width: 1130px) {
-    .col2 .moviescol {
+@media (max-width: 1239px) {
+    
+    .moviescol {
         width: calc(25% - 14px);
     }
     .imgBackground {
         display: none;
-    }
-    .bigPoster {
-        width: 500px;
-    }
-    .bigPoster img {
-        width: 500px;
     }
     .nav-item {
         margin-right: 0;
@@ -584,23 +586,35 @@ button {
     }
     
 }
-@media (max-width: 555px) {
-    .movieTitle {
-        width: 152px;
-    }
-    .moviescol img {
-        width: 152px;
-        height: 228px;
-    }
-    .play:hover::before {
-        margin-left: 42px;
-    margin-top: 84px;
-    }
-    .col2 .moviescol {
+@media (max-width: 1011px) {
+    .moviescol {
         width: calc(33% - 14px);
+    }
+    /* .moviescol img {
+        width: 262px;
+        height: 329px;
+    } */
+}
+@media (max-width: 783px) {
+    
+    .moviescol {
+        width: calc(50% - 16px);
+        padding: 0 8px;
+    }
+    /* .moviescol img {
+        width: 400px;
+        height: 464px;
+    } */
+    iframe {
+        width: 420px;
+        height: 329px;
     }
 }
 @media (max-width: 413px) {
+    iframe {
+        width: 100%;
+        height: 129px;
+    }
     .container {
         width: calc( 100% - 33px );
     }
@@ -617,6 +631,10 @@ button {
     }
     .header__search {
         right: 15px;
+    }
+    .allDetails h1 {
+        margin-block-end: 38px;
+        font-size: 29px;
     }
 }
 

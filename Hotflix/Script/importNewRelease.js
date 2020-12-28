@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // }
         });
         
-        document.querySelector('.col2').innerHTML += htmlCards;
+        document.querySelector(".newItems").querySelector('.col').innerHTML += htmlCards;
         ++page;
     }
 
