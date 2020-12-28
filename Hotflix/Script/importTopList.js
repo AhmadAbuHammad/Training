@@ -14,14 +14,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     element.style.borderColor = "#fd6060";  
                 }
             });
-            // document.querySelector('.prev').addEventListener('click', event => {
-            //     console.log('hh')
-            //     $('.col').slick('slickPrev');
-            // });
-            // document.querySelector('.next').addEventListener('click', event => {
-            //     console.log('hh')
-            //     $('.col').slick('slickNext');
-            // });
             }
         });
 
@@ -29,9 +21,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
      * @param  {Array of objects} movies //draw tob rated section
      */
     function drawTobList (movies) {
-        let c = '';
+        let htmlCard = '';
         movies.forEach(element => {
-            c += 
+            htmlCard += 
             `<div class = "moviescol">
                 <a class = "play" href="moredetails.html?id=${element.id}">
                     <div class = "poster">
@@ -46,9 +38,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             </div>`;
         });
         
-        document.querySelector('.col').innerHTML += c;
-        $('.col').slick({
+        document.querySelector('.col').innerHTML += htmlCard;
+        $('.topRated .col').slick({
             infinite: true,
+            arrows: false,
             slidesToShow: 5,
             slidesToScroll: 1,
             responsive: [
@@ -58,7 +51,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false
                   }
                 },
                 {
@@ -88,5 +81,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         else
         return e;
     }
+    document.querySelector('.next').addEventListener('click', event => {
+        $('.col').slick('slickNext');
+    });
+    document.querySelector('.prev').addEventListener('click', event => {
+        $('.col').slick('slickPrev');
+    });
     
+
 });
